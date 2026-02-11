@@ -19,19 +19,25 @@ export default function Navigation() {
 
   const handleEmailClick = (e) => {
     e.preventDefault();
-    navigator.clipboard.writeText('aasrith.mandava@gmail.com').then(() => {
-      // Show toast notification
-      const toast = document.createElement('div');
-      toast.className = 'copy-toast';
-      toast.textContent = '📧 Email copied to clipboard!';
-      document.body.appendChild(toast);
 
-      setTimeout(() => toast.classList.add('show'), 10);
-      setTimeout(() => {
-        toast.classList.remove('show');
-        setTimeout(() => document.body.removeChild(toast), 300);
-      }, 2000);
-    });
+    // Try to open email client
+    window.location.href = 'mailto:aasrith.mandava@gmail.com';
+
+    // Fallback: Copy to clipboard after a short delay
+    setTimeout(() => {
+      navigator.clipboard.writeText('aasrith.mandava@gmail.com').then(() => {
+        const toast = document.createElement('div');
+        toast.className = 'copy-toast';
+        toast.textContent = '📧 Email copied to clipboard!';
+        document.body.appendChild(toast);
+
+        setTimeout(() => toast.classList.add('show'), 10);
+        setTimeout(() => {
+          toast.classList.remove('show');
+          setTimeout(() => document.body.removeChild(toast), 300);
+        }, 2000);
+      });
+    }, 500);
   };
 
   return (
