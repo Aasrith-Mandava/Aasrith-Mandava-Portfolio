@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Georgia State University | Aasrith Mandava</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #f5f5f3;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666666;
+            --accent: #0039a6;
+            --accent-light: #e8f0ff;
+            --border: #e0e0e0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 4rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(245, 245, 243, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-back {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-back:hover {
+            opacity: 0.6;
+        }
+
+        .nav-logo {
+            font-weight: 600;
+            font-size: 1.1rem;
+            letter-spacing: -0.02em;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 10rem 4rem 5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-gradient {
+            position: absolute;
+            top: -50px;
+            right: -100px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0, 57, 166, 0.15) 0%, rgba(30, 90, 168, 0.08) 40%, transparent 70%);
+            filter: blur(60px);
+            z-index: 0;
+            transition: transform 0.3s ease-out;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+        }
+
+        .hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .company-logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #0039a6 0%, #1e5aa8 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        .hero-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .hero-info .location {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .hero-info .duration {
+            font-size: 0.9rem;
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 400;
+            letter-spacing: -0.03em;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .hero-role {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            line-height: 1.8;
+        }
+
+        /* Main Content */
+        .content {
+            padding: 0 4rem 5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        /* Accomplishments */
+        .accomplishments {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .accomplishment {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 1.5rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .accomplishment:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border-color: var(--accent);
+        }
+
+        .accomplishment-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            background: var(--accent-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .accomplishment-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--accent);
+        }
+
+        .accomplishment-content h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+
+        .accomplishment-content p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .accomplishment-metrics {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .metric {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .metric-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .metric-label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        /* Tech Stack */
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .tech-tag {
+            padding: 0.6rem 1.2rem;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .tech-tag:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: var(--accent-light);
+        }
+
+        /* Footer */
+        footer {
+            padding: 3rem 4rem;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .footer-nav a {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 500;
+            padding: 1rem 2rem;
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .footer-nav a:hover {
+            background: var(--text-primary);
+            color: white;
+            border-color: var(--text-primary);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem 1.5rem;
+            }
+
+            .hero {
+                padding: 7rem 1.5rem 3rem;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .content {
+                padding: 0 1.5rem 3rem;
+            }
+
+            .accomplishment {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .accomplishment-icon {
+                width: 40px;
+                height: 40px;
+            }
+
+            .footer-nav {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        .fade-in:nth-child(2) { animation-delay: 0.1s; }
+        .fade-in:nth-child(3) { animation-delay: 0.2s; }
+        .fade-in:nth-child(4) { animation-delay: 0.3s; }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="portfolio.html" class="nav-back">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Back
+        </a>
+        <div class="nav-logo">Aasrith Mandava</div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-gradient"></div>
+        <div class="hero-content">
+            <div class="hero-meta">
+                <div class="company-logo">GSU</div>
+                <div class="hero-info">
+                    <span class="location">Atlanta, GA</span>
+                    <span class="duration">Aug 2024 – Present</span>
+                </div>
+            </div>
+            <h1 class="hero-title">Georgia State University</h1>
+            <p class="hero-role">Graduate Research Assistant — URSA</p>
+            <p class="hero-description">
+                Building next-generation research applications at the Undergraduate Research in Science and Analytics lab, focusing on database optimization, real-time systems, and modern frontend architectures.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="content">
+        <!-- Accomplishments -->
+        <section class="section">
+            <h2 class="section-title">Key Accomplishments</h2>
+            <div class="accomplishments">
+                <div class="accomplishment fade-in">
+                    <div class="accomplishment-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <div class="accomplishment-content">
+                        <h3>Database Performance Optimization</h3>
+                        <p>Redesigned PostgreSQL execution plans using indexing strategies, optimized joins, and async FastAPI endpoints, dramatically improving query performance for research data retrieval.</p>
+                        <div class="accomplishment-metrics">
+                            <div class="metric">
+                                <span class="metric-value">3x</span>
+                                <span class="metric-label">Faster Queries</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">60s→20s</span>
+                                <span class="metric-label">Latency Reduction</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accomplishment fade-in">
+                    <div class="accomplishment-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    </div>
+                    <div class="accomplishment-content">
+                        <h3>Real-Time Synchronization System</h3>
+                        <p>Built real-time synchronization pipelines using WebSockets with Azure AD and OAuth protocols, ensuring data consistency across multiple concurrent users and research sessions.</p>
+                        <div class="accomplishment-metrics">
+                            <div class="metric">
+                                <span class="metric-value">99.9%</span>
+                                <span class="metric-label">Data Consistency</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accomplishment fade-in">
+                    <div class="accomplishment-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="3" y1="9" x2="21" y2="9"></line>
+                            <line x1="9" y1="21" x2="9" y2="9"></line>
+                        </svg>
+                    </div>
+                    <div class="accomplishment-content">
+                        <h3>Frontend Architecture Modernization</h3>
+                        <p>Modularized legacy frontend code into reusable React components with clear state boundaries, significantly improving code maintainability and reducing production issues.</p>
+                        <div class="accomplishment-metrics">
+                            <div class="metric">
+                                <span class="metric-value">35%</span>
+                                <span class="metric-label">Fewer Defects</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accomplishment fade-in">
+                    <div class="accomplishment-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                    </div>
+                    <div class="accomplishment-content">
+                        <h3>CI/CD Pipeline Standardization</h3>
+                        <p>Standardized CI/CD pipelines using Docker and GitHub Actions, enabling reproducible deployments across development, staging, and production environments.</p>
+                        <div class="accomplishment-metrics">
+                            <div class="metric">
+                                <span class="metric-value">50%</span>
+                                <span class="metric-label">Faster Builds</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section class="section">
+            <h2 class="section-title">Technologies Used</h2>
+            <div class="tech-stack">
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">FastAPI</span>
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">WebSockets</span>
+                <span class="tech-tag">Azure AD</span>
+                <span class="tech-tag">OAuth</span>
+                <span class="tech-tag">Docker</span>
+                <span class="tech-tag">GitHub Actions</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">TypeScript</span>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Navigation -->
+    <footer>
+        <div class="footer-nav">
+            <a href="portfolio.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                Back to Portfolio
+            </a>
+            <a href="experience-svap.html">
+                Next: SVAP Technologies
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // Cursor tracking for gradient
+        const heroGradient = document.querySelector('.hero-gradient');
+
+        document.addEventListener('mousemove', (e) => {
+            if (heroGradient) {
+                const offsetX = (e.clientX - window.innerWidth / 2) * 0.2;
+                const offsetY = (e.clientY - window.innerHeight / 2) * 0.2;
+                heroGradient.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+            }
+        });
+    </script>
+</body>
+</html>
