@@ -1,4 +1,21 @@
 export default function Footer() {
+  const handleEmailClick = (e) => {
+    e.preventDefault();
+    navigator.clipboard.writeText('aasrith.mandava@gmail.com').then(() => {
+      // Show toast notification
+      const toast = document.createElement('div');
+      toast.className = 'copy-toast';
+      toast.textContent = '📧 Email copied to clipboard!';
+      document.body.appendChild(toast);
+
+      setTimeout(() => toast.classList.add('show'), 10);
+      setTimeout(() => {
+        toast.classList.remove('show');
+        setTimeout(() => document.body.removeChild(toast), 300);
+      }, 2000);
+    });
+  };
+
   return (
     <footer id="connect">
       <div className="footer-gradient"></div>
@@ -6,7 +23,7 @@ export default function Footer() {
         <div className="footer-main">
           <h2>Connect with me</h2>
           <div className="footer-links">
-            <a href="mailto:aasrith.mandava@gmail.com" className="connect-link">
+            <a href="#" onClick={handleEmailClick} className="connect-link" style={{ cursor: 'pointer' }}>
               <span className="icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
