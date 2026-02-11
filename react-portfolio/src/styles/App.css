@@ -1415,13 +1415,25 @@ footer {
   }
 
   .hero {
-    padding: 5rem 1.5rem 3rem;
-    min-height: 60vh;
+    padding: 5rem 1.5rem 8rem;
+    min-height: 90vh;
+  }
+
+  .hero-content {
+    margin-bottom: 4rem;
+  }
+
+  .hero-location {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
   }
 
   .hero-title {
     font-size: 2rem;
     line-height: 1.2;
+    margin-bottom: 1.5rem;
   }
 
   .hero-subtitle {
@@ -1429,7 +1441,12 @@ footer {
   }
 
   .hero-info {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .hero-info p {
+    margin-bottom: 1rem;
   }
 
   .cta-buttons {
@@ -1441,6 +1458,30 @@ footer {
   .cta-buttons .cta-secondary {
     width: 100%;
     justify-content: center;
+  }
+
+  .scroll-indicator {
+    bottom: 2rem;
+  }
+
+  .mouse {
+    width: 24px;
+    height: 40px;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .section-meta {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .section-meta span {
+    font-size: 0.75rem;
   }
 
   section {
