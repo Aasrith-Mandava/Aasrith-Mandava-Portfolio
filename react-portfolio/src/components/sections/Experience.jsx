@@ -50,7 +50,6 @@ export default function Experience() {
     <section id="experience" className="fade-in">
       <div className="section-header">
         <h2 className="section-title">Experience</h2>
-        <div className="section-meta">Years of Experience → <span>3+</span></div>
       </div>
       <div className="experience-tree stagger-children">
         {experiences.map((exp) => (
