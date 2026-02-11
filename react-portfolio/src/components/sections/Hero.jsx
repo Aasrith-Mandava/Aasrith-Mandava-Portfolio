@@ -105,10 +105,7 @@ export default function Hero() {
         <h1 className="hero-title">{displayText}<span className="cursor-blink">|</span></h1>
         <div className="hero-info">
           <p>
-            <span className="value">I'm a <span className="accent-text">software engineer</span> specializing in building scalable systems and AI-powered solutions.</span>
-          </p>
-          <p>
-            <span className="value">Passionate about creating elegant code and stunning user experiences.</span>
+            <span className="value">Growing up amidst rockets and automation ignited my passion for engineering. Today, I channel that inspiration into building software that scales, automates, and adapts—creating AI systems designed to launch ideas into reality.</span>
           </p>
         </div>
       </div>
