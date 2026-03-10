@@ -13,6 +13,8 @@ import ExperienceISRO from './pages/ExperienceISRO';
 import ProjectMindVault from './pages/ProjectMindVault';
 import ProjectBotStudio from './pages/ProjectBotStudio';
 import ProjectHelpPro from './pages/ProjectHelpPro';
+import ProjectAura from './pages/ProjectAura';
+import ProjectLumos from './pages/ProjectLumos';
 import './styles/App.css';
 
 function HomePage() {
@@ -75,6 +77,8 @@ function App() {
         <Route path="/project/mindvault" element={<ProjectMindVault />} />
         <Route path="/project/botstudio" element={<ProjectBotStudio />} />
         <Route path="/project/helppro" element={<ProjectHelpPro />} />
+        <Route path="/project/aura" element={<ProjectAura />} />
+        <Route path="/project/lumos" element={<ProjectLumos />} />
       </Routes>
     </BrowserRouter>
   );

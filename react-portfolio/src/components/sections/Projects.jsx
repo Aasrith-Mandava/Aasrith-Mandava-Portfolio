@@ -39,6 +39,30 @@ const projects = [
         <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
       </svg>
     )
+  },
+  {
+    name: 'AURA',
+    tagline: 'Multi-agent healthcare AI with LangGraph orchestration & Vision Transformer diagnostics',
+    description: 'Architected a LangGraph multi-agent ecosystem orchestrating 6 specialist agents for clinical triage, featuring Agentic RAG with ChromaDB and IRIS — a Vision Transformer engine predicting 10 systemic health risks from retinal scans.',
+    tech: ['LangGraph', 'React', 'TypeScript', 'ChromaDB', 'Gemini Pro', 'ViT'],
+    gradient: 'linear-gradient(135deg, #4dd9c0 0%, #8b5cf6 100%)',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+      </svg>
+    )
+  },
+  {
+    name: 'Lumos',
+    tagline: 'Federal crime analytics platform with 48 GB ETL pipeline & ML-powered inference',
+    description: 'Built a Python ETL pipeline ingesting 48 GB of raw federal crime data across 51 jurisdictions, with an async FastAPI backend parallelizing 11 data sources and Gemini AI validation — sustaining sub-2-second responses under load.',
+    tech: ['Python', 'FastAPI', 'asyncio', 'Gemini AI', 'ML'],
+    gradient: 'linear-gradient(135deg, #3b82f6 0%, #22c55e 100%)',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+      </svg>
+    )
   }
 ];
 
