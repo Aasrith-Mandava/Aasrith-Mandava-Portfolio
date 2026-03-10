@@ -16,17 +16,17 @@ const experiences = [
     ]
   },
   {
-    id: 'svap',
-    company: 'SVAP Technologies',
-    logo: 'SV',
-    logoClass: 'logo-svap',
-    description: 'AI-driven synthetic media solutions',
-    role: 'Software Developer Intern',
-    period: 'May 2025 – Aug 2025',
+    id: 'vensai',
+    company: 'Vensai Technologies (Client- Ceva Logistics)',
+    logo: 'VT',
+    logoClass: 'logo-vensai',
+    description: 'AI-powered enterprise solutions and automation',
+    role: 'Software Developer Intern (Co-op)',
+    period: '2024',
     details: [
-      'Developed a production-grade Next.js application integrating Play.ht APIs for AI voice cloning.',
-      'Optimized Node.js inference services with in-memory caching, achieving <300ms latency.',
-      'Designed scalable ETL pipelines to ingest and validate raw audio data for AI training.'
+      'Designed and developed an end-to-end AI-powered HR onboarding chatbot using Agentic RAG with multi-agent orchestration via Autogen framework.',
+      'Spearheaded an SDLC Automation Agent utilizing Transformer-based architectures (RoBERTa/BERT) to autonomously detect and classify critical system issues from 500+ weekly logs.',
+      'Built an LLM microservice using Amazon Bedrock and AWS Lambda integrated via API Gateway to automate 2 different Internal APIs workflows, reducing content analysis time by 75%.'
     ]
   },
   {

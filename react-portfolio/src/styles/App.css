@@ -7,46 +7,46 @@
 }
 
 :root {
-  /* Monochrome Onyx Theme - Light (Now Dark/Black based) */
-  --bg-primary: #0a0a0a;
-  --bg-secondary: #171717;
-  --bg-card: rgba(23, 23, 23, 0.9);
-  --bg-elevated: #262626;
+  /* LangChain Dark Navy Theme */
+  --bg-primary: #0a1628;
+  --bg-secondary: #0d1f38;
+  --bg-card: rgba(11, 25, 47, 0.9);
+  --bg-elevated: #112240;
 
   /* Text Colors */
-  --text-primary: #ffffff;
-  --text-secondary: #a3a3a3;
-  --text-tertiary: #525252;
+  --text-primary: #e2e8f0;
+  --text-secondary: #8fafc4;
+  --text-tertiary: #4a6885;
 
-  /* Accents - Monochrome Gradients */
-  --accent-cyan: #ffffff;
-  /* Pure White */
-  --accent-purple: #d4d4d4;
-  /* Light Silver */
-  --accent-magenta: #a3a3a3;
-  /* Silver */
-  --accent-blue: #737373;
-  /* Grey */
+  /* Accents - LangChain Palette */
+  --accent-cyan: #4dd9c0;
+  /* Teal / Primary */
+  --accent-purple: #8b5cf6;
+  /* Purple / Foundation */
+  --accent-magenta: #22c55e;
+  /* Green / Project */
+  --accent-blue: #3b82f6;
+  /* Blue */
 
-  /* Gradients - White & Silver */
-  --gradient-primary: linear-gradient(135deg, #ffffff 0%, #a3a3a3 100%);
-  --gradient-secondary: linear-gradient(135deg, #e5e5e5 0%, #737373 100%);
-  --gradient-glow: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1), transparent);
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #4dd9c0 0%, #3b82f6 100%);
+  --gradient-secondary: linear-gradient(135deg, #8b5cf6 0%, #4dd9c0 100%);
+  --gradient-glow: radial-gradient(circle at 50% 50%, rgba(77, 217, 192, 0.12), transparent);
 
-  /* Glass Effect - Smoked Glass */
-  --glass-bg: rgba(23, 23, 23, 0.8);
-  --glass-border: rgba(255, 255, 255, 0.1);
+  /* Glass Effect - Dark Navy Glass */
+  --glass-bg: rgba(10, 22, 40, 0.8);
+  --glass-border: rgba(77, 217, 192, 0.15);
 
-  /* Shadows - White Glows */
+  /* Shadows - Teal Glows */
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.5);
   --shadow-md: 0 8px 16px -4px rgba(0, 0, 0, 0.5);
   --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
-  --shadow-glow-cyan: 0 0 30px rgba(255, 255, 255, 0.15);
-  --shadow-glow-magenta: 0 0 30px rgba(255, 255, 255, 0.1);
+  --shadow-glow-cyan: 0 0 30px rgba(77, 217, 192, 0.2);
+  --shadow-glow-magenta: 0 0 30px rgba(139, 92, 246, 0.15);
 
   /* Borders */
-  --border: #262626;
-  --border-light: #404040;
+  --border: #1a3347;
+  --border-light: #1e3e57;
 }
 
 html {
@@ -211,7 +211,7 @@ nav.scrolled {
   right: -10%;
   width: 800px;
   height: 800px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, rgba(148, 163, 184, 0.05) 35%, transparent 70%);
+  background: radial-gradient(circle, rgba(77, 217, 192, 0.07) 0%, rgba(59, 130, 246, 0.08) 35%, transparent 70%);
   filter: blur(80px);
   z-index: 0;
   pointer-events: none;
@@ -224,7 +224,7 @@ nav.scrolled {
   left: -10%;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.02) 35%, transparent 70%);
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.07) 0%, rgba(77, 217, 192, 0.05) 35%, transparent 70%);
   filter: blur(80px);
   z-index: 0;
   pointer-events: none;
@@ -745,15 +745,18 @@ section {
 }
 
 .logo-isro {
-  background: linear-gradient(135deg, #171717 0%, #404040 100%);
+  background: linear-gradient(135deg, #0a1f3a 0%, #1a3a5c 100%);
+  border: 1px solid rgba(77, 217, 192, 0.3);
 }
 
-.logo-svap {
-  background: linear-gradient(135deg, #262626 0%, #525252 100%);
+.logo-vensai {
+  background: linear-gradient(135deg, #12103a 0%, #2a1f5c 100%);
+  border: 1px solid rgba(139, 92, 246, 0.3);
 }
 
 .logo-gsu {
-  background: linear-gradient(135deg, #404040 0%, #737373 100%);
+  background: linear-gradient(135deg, #0a2a1a 0%, #1a4a30 100%);
+  border: 1px solid rgba(34, 197, 94, 0.3);
 }
 
 .experience-info {
@@ -1684,48 +1687,43 @@ footer {
   }
 }
 
-/* Dark Mode Theme - Obsidian Reverse */
+/* Light Mode Theme - LangChain Lighter Variant */
 [data-theme='dark'] {
-  /* Obsidian Theme (Reversed for variation) */
-  --bg-primary: #ffffff;
-  --bg-secondary: #f5f5f5;
-  --bg-card: rgba(255, 255, 255, 0.9);
-  --bg-elevated: #ffffff;
+  --bg-primary: #061020;
+  --bg-secondary: #081528;
+  --bg-card: rgba(6, 16, 32, 0.95);
+  --bg-elevated: #0d1e35;
 
   /* Text Colors */
-  --text-primary: #000000;
-  --text-secondary: #404040;
-  --text-tertiary: #737373;
+  --text-primary: #f0f8ff;
+  --text-secondary: #7aa8c4;
+  --text-tertiary: #3d5a75;
 
-  /* Accents - Black/Charcoal */
-  --accent-cyan: #171717;
-  /* Black */
-  --accent-purple: #525252;
-  /* Dark Grey */
-  --accent-magenta: #737373;
-  /* Grey */
-  --accent-blue: #262626;
-  /* Charcoal */
+  /* Accents */
+  --accent-cyan: #5ee8ce;
+  --accent-purple: #a78bfa;
+  --accent-magenta: #34d399;
+  --accent-blue: #60a5fa;
 
   /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #171717 0%, #525252 100%);
-  --gradient-secondary: linear-gradient(135deg, #262626 0%, #737373 100%);
-  --gradient-glow: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.1), transparent);
+  --gradient-primary: linear-gradient(135deg, #5ee8ce 0%, #60a5fa 100%);
+  --gradient-secondary: linear-gradient(135deg, #a78bfa 0%, #5ee8ce 100%);
+  --gradient-glow: radial-gradient(circle at 50% 50%, rgba(94, 232, 206, 0.15), transparent);
 
   /* Glass Effect */
-  --glass-bg: rgba(255, 255, 255, 0.8);
-  --glass-border: rgba(0, 0, 0, 0.1);
+  --glass-bg: rgba(6, 16, 32, 0.85);
+  --glass-border: rgba(94, 232, 206, 0.2);
 
-  /* Shadows - Dark Shadows */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
-  --shadow-glow-cyan: 0 0 30px rgba(0, 0, 0, 0.1);
-  --shadow-glow-magenta: 0 0 30px rgba(0, 0, 0, 0.05);
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.6);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.6);
+  --shadow-glow-cyan: 0 0 30px rgba(94, 232, 206, 0.25);
+  --shadow-glow-magenta: 0 0 30px rgba(167, 139, 250, 0.2);
 
   /* Borders */
-  --border: #e5e5e5;
-  --border-light: #f5f5f5;
+  --border: #0f2840;
+  --border-light: #122e4a;
 }
 
 /* Slide Animations for Experience */

@@ -18,12 +18,12 @@
         }
 
         :root {
-            --bg-primary: #f5f5f3;
-            --text-primary: #1a1a1a;
-            --text-secondary: #666666;
-            --accent: #0039a6;
-            --accent-light: #e8f0ff;
-            --border: #e0e0e0;
+            --bg-primary: #0a1628;
+            --text-primary: #e2e8f0;
+            --text-secondary: #8fafc4;
+            --accent: #4dd9c0;
+            --accent-light: rgba(77, 217, 192, 0.1);
+            --border: #1a3347;
         }
 
         body {
@@ -44,7 +44,7 @@
             left: 0;
             right: 0;
             z-index: 100;
-            background: rgba(245, 245, 243, 0.95);
+            background: rgba(10, 22, 40, 0.95);
             backdrop-filter: blur(10px);
         }
 
@@ -81,7 +81,7 @@
             right: -100px;
             width: 600px;
             height: 600px;
-            background: radial-gradient(circle, rgba(0, 57, 166, 0.15) 0%, rgba(30, 90, 168, 0.08) 40%, transparent 70%);
+            background: radial-gradient(circle, rgba(77, 217, 192, 0.1) 0%, rgba(59, 130, 246, 0.07) 40%, transparent 70%);
             filter: blur(60px);
             z-index: 0;
             transition: transform 0.3s ease-out;
@@ -104,7 +104,8 @@
             width: 80px;
             height: 80px;
             border-radius: 16px;
-            background: linear-gradient(135deg, #0039a6 0%, #1e5aa8 100%);
+            background: linear-gradient(135deg, #0a1f3a 0%, #1a3a5c 100%);
+            border: 1px solid rgba(77, 217, 192, 0.3);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -185,7 +186,7 @@
             grid-template-columns: 60px 1fr;
             gap: 1.5rem;
             padding: 2rem;
-            background: white;
+            background: rgba(10, 22, 40, 0.8);
             border-radius: 16px;
             border: 1px solid var(--border);
             transition: all 0.3s ease;
@@ -258,7 +259,7 @@
 
         .tech-tag {
             padding: 0.6rem 1.2rem;
-            background: white;
+            background: rgba(10, 22, 40, 0.8);
             border: 1px solid var(--border);
             border-radius: 30px;
             font-size: 0.9rem;
@@ -299,9 +300,9 @@
         }
 
         .footer-nav a:hover {
-            background: var(--text-primary);
-            color: white;
-            border-color: var(--text-primary);
+            background: var(--accent);
+            color: #0a1628;
+            border-color: var(--accent);
         }
 
         /* Responsive */
