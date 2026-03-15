@@ -1,3 +1,6 @@
+
+const experiences = [
+  {
     id: 'gsu',
     company: 'Georgia State University',
     logo: 'GSU',
@@ -61,7 +64,7 @@ export default function Experience() {
                 {exp.details && (
                   <ul className="experience-details">
                     {exp.details.map((detail, index) => (
-                      <li key={`detail-${index}`}>{detail}</li>
+                      <li key={index}>{detail}</li>
                     ))}
                   </ul>
                 )}

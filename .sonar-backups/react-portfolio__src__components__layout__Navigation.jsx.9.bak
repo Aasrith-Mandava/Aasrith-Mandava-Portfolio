@@ -1,20 +1,5 @@
 import { useState, useEffect } from 'react';
 
-const showToastNotification = () => {
-  const toast = document.createElement('div');
-  toast.className = 'copy-toast';
-  toast.textContent = '📧 Email copied to clipboard!';
-  document.body.appendChild(toast);
-
-  globalThis.setTimeout(() => {
-    toast.classList.add('show');
-    globalThis.setTimeout(() => {
-      toast.classList.remove('show');
-      globalThis.setTimeout(() => toast.remove(), 300);
-    }, 2000);
-  }, 10);
-};
-
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
 
@@ -32,20 +17,35 @@ export default function Navigation() {
     });
   };
 
-  const handleEmailClick = async (e) => {
+  const handleEmailClick = (e) => {
     e.preventDefault();
 
     // Try to open email client
     globalThis.location.href = 'mailto:aasrith.mandava@gmail.com';
 
     // Fallback: Copy to clipboard after a short delay
-    await new Promise(resolve => globalThis.setTimeout(resolve, 500));
-    try {
-      await navigator.clipboard.writeText('aasrith.mandava@gmail.com');
-      showToastNotification();
-    } catch (err) {
-      console.error('Copy to clipboard failed:', err);
-    }
+    globalThis.setTimeout(() => {
+      navigator.clipboard.writeText('aasrith.mandava@gmail.com').then(() => {
+        const toast = document.createElement('div');
+        toast.className = 'copy-toast';
+        toast.textContent = '📧 Email copied to clipboard!';
+        document.body.appendChild(toast);
+
+        const showToast = () => {
+          toast.classList.add('show');
+          globalThis.setTimeout(() => {
+            toast.classList.remove('show');
+            globalThis.setTimeout(() => toast.remove(), 300);
+          }, 2000);
+        };
+        globalThis.setTimeout(showToast, 10);
+      });
+    }, 500);
+  };
+
+  const handleSocialClick = (e) => {
+    e.preventDefault();
+    // Add your logic here
   };
 
   const handleSocial = () => {
@@ -53,7 +53,7 @@ export default function Navigation() {
   };
 
   const handleSocialClickWrapper = () => {
-    handleSocial();
+    handleSocialClick();
   };
 
   return (

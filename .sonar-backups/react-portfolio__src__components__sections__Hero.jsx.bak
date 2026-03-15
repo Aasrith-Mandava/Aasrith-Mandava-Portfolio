@@ -38,10 +38,10 @@ export default function Hero() {
     updateTime();
     const interval = setInterval(updateTime, 1000);
 
-    let mouseX = globalThis.innerWidth / 2;
-    let mouseY = globalThis.innerHeight / 2;
-    let currentX = globalThis.innerWidth / 2;
-    let currentY = globalThis.innerHeight / 2;
+    let mouseX = window.innerWidth / 2;
+    let mouseY = window.innerHeight / 2;
+    let currentX = window.innerWidth / 2;
+    let currentY = window.innerHeight / 2;
     let animationId;
 
     const handleMouseMove = (e) => {
@@ -60,10 +60,10 @@ export default function Hero() {
       currentX += (mouseX - currentX) * 0.1;
       currentY += (mouseY - currentY) * 0.1;
 
-      const offsetX1 = (currentX - globalThis.innerWidth / 2) * 0.3;
-      const offsetY1 = (currentY - globalThis.innerHeight / 2) * 0.3;
-      const offsetX2 = (currentX - globalThis.innerWidth / 2) * 0.2;
-      const offsetY2 = (currentY - globalThis.innerHeight / 2) * 0.2;
+      const offsetX1 = (currentX - window.innerWidth / 2) * 0.3;
+      const offsetY1 = (currentY - window.innerHeight / 2) * 0.3;
+      const offsetX2 = (currentX - window.innerWidth / 2) * 0.2;
+      const offsetY2 = (currentY - window.innerHeight / 2) * 0.2;
 
       if (gradient1Ref.current) {
         gradient1Ref.current.style.transform = `translate(${offsetX1}px, ${offsetY1}px)`;
@@ -72,16 +72,16 @@ export default function Hero() {
         gradient2Ref.current.style.transform = `translate(${offsetX2}px, ${offsetY2}px)`;
       }
 
-      animationId = globalThis.requestAnimationFrame(animateGradients);
+      animationId = requestAnimationFrame(animateGradients);
     };
 
-    globalThis.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mousemove', handleMouseMove);
     animateGradients();
 
     return () => {
       clearInterval(interval);
-      globalThis.removeEventListener('mousemove', handleMouseMove);
-      if (animationId) globalThis.cancelAnimationFrame(animationId);
+      window.removeEventListener('mousemove', handleMouseMove);
+      if (animationId) cancelAnimationFrame(animationId);
     };
   }, []);
 
