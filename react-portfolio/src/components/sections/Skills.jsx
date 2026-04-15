@@ -1,23 +1,35 @@
 const skillCategories = [
   {
     title: 'Languages',
-    skills: ['Java', 'Python', 'SQL', 'TypeScript']
-  },
-  {
-    title: 'Frameworks & Libraries',
-    skills: ['Spring Boot', 'React', 'Next.js', 'FastAPI', 'Node.js', 'WebSockets']
+    skills: ['Python', 'Java', 'SQL', 'JavaScript']
   },
   {
     title: 'Databases',
-    skills: ['PostgreSQL', 'MySQL']
+    skills: ['PostgreSQL', 'OracleSQL']
+  },
+  {
+    title: 'Libraries',
+    skills: ['NumPy', 'Pandas', 'Matplotlib', 'Scikit-learn', 'PyTorch', 'TensorFlow', 'Keras']
   },
   {
     title: 'AI & ML',
-    skills: ['RAG', 'LLM Integration', 'Vector Databases', 'Semantic Search', 'Embeddings']
+    skills: ['LangChain', 'LangGraph', 'LangSmith', 'REST APIs', 'Fine Tuning', 'Microservices (FastAPI, MCP)', 'Transformers']
   },
   {
     title: 'Cloud & DevOps',
-    skills: ['AWS EC2', 'RDS', 'ElastiCache', 'Docker', 'Kafka', 'Elasticsearch', 'Git', 'Azure AD']
+    skills: ['AWS (EC2, Bedrock, Lambda, SageMaker)', 'Docker', 'CI/CD', 'Git']
+  },
+  {
+    title: 'Competencies',
+    skills: ['ETL Pipelines', 'Large Language Models', 'VectorDB', 'Prompt Engineering']
+  },
+  {
+    title: 'AI Tools',
+    skills: ['GitHub Copilot', 'Claude Code', 'LangSmith', 'OpenAI', 'Google Gemini']
+  },
+  {
+    title: 'Certifications',
+    skills: ['Foundations of LangChain', 'Foundations of LangGraph']
   }
 ];
 

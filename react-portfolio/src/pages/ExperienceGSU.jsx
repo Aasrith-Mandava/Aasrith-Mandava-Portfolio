@@ -11,7 +11,7 @@ export default function ExperienceGSU() {
         <div className="detail-logo logo-gsu">GSU</div>
         <div>
           <h1>Georgia State University</h1>
-          <p className="detail-role">Graduate Research Assistant</p>
+          <p className="detail-role">Graduate Research Assistant – AIML Engineer</p>
           <p className="detail-period">Aug 2024 – Present | Atlanta, GA</p>
         </div>
       </div>
@@ -19,43 +19,40 @@ export default function ExperienceGSU() {
       <div className="detail-content">
         <section>
           <h2>Overview</h2>
-          <p>Working as a Graduate Research Assistant at Georgia State University, contributing to cutting-edge research in computer science, artificial intelligence, and software engineering. Collaborating with faculty and fellow researchers on innovative projects that push the boundaries of technology.</p>
+          <p>Working as a Graduate Research Assistant and AIML Engineer at Georgia State University, focusing on medical imaging AI, multi-modal language models, and healthcare data systems. Building cutting-edge Vision-Language Transformers for automated radiology report generation and MCP servers for LLM-powered healthcare database interactions.</p>
         </section>
 
         <section>
           <h2>Key Projects & Achievements</h2>
           <ul>
-            <li>Developed advanced research applications using React, Python, and modern web technologies</li>
-            <li>Implemented machine learning models for data analysis and pattern recognition</li>
-            <li>Built scalable backend systems to support research data processing</li>
-            <li>Conducted experiments and analyzed large datasets for academic publications</li>
-            <li>Collaborated with cross-functional research teams on AI/ML initiatives</li>
-            <li>Presented research findings at departmental seminars and conferences</li>
-            <li>Mentored undergraduate students on software development best practices</li>
+            <li>Trained a Vision-Language Transformer on 7K+ radiology image-report pairs, using cross-attention between a ViT encoder and GPT-2 decoder to generate free-text reports from chest X-rays.</li>
+            <li>Fine-tuned multi-modal LLMs with PyTorch and LoRA for radiology report generation, scored 13.4% above VisionGPT on BLEU-4 at 1.6s/image inference.</li>
+            <li>Built an MCP server that connects healthcare databases to LLM agents for real-time tool-calling, cut manual query latency by 60%.</li>
           </ul>
         </section>
 
         <section>
           <h2>Research Areas</h2>
           <ul>
-            <li>Artificial Intelligence and Machine Learning applications</li>
-            <li>Full-stack web development for research platforms</li>
-            <li>Data science and statistical analysis</li>
-            <li>Software engineering methodologies</li>
+            <li>Vision-Language Transformers for medical image understanding</li>
+            <li>Multi-modal LLM fine-tuning with parameter-efficient methods (LoRA)</li>
+            <li>MCP server architecture for LLM-database integration</li>
+            <li>Automated radiology report generation from chest X-rays</li>
           </ul>
         </section>
 
         <section>
           <h2>Technologies Used</h2>
           <div className="tech-tags">
+            <span>PyTorch</span>
+            <span>LoRA</span>
+            <span>Vision Transformer (ViT)</span>
+            <span>GPT-2</span>
+            <span>MCP Server</span>
+            <span>LLM Agents</span>
             <span>Python</span>
-            <span>React</span>
-            <span>Machine Learning</span>
-            <span>TensorFlow</span>
-            <span>Data Analysis</span>
-            <span>PostgreSQL</span>
-            <span>FastAPI</span>
-            <span>Research Methods</span>
+            <span>Cross-Attention</span>
+            <span>BLEU-4</span>
           </div>
         </section>
       </div>

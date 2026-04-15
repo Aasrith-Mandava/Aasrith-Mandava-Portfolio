@@ -8,13 +8,13 @@ import Skills from './components/sections/Skills';
 import Education from './components/sections/Education';
 import Footer from './components/layout/Footer';
 import ExperienceGSU from './pages/ExperienceGSU';
-import ExperienceVensai from './pages/ExperienceVensai';
 import ExperienceISRO from './pages/ExperienceISRO';
-import ProjectMindVault from './pages/ProjectMindVault';
-import ProjectBotStudio from './pages/ProjectBotStudio';
-import ProjectHelpPro from './pages/ProjectHelpPro';
+import ProjectNL2Dash from './pages/ProjectNL2Dash';
 import ProjectAura from './pages/ProjectAura';
-import ProjectLumos from './pages/ProjectLumos';
+import ProjectSonarAgent from './pages/ProjectSonarAgent';
+import ProjectBotStudio from './pages/ProjectBotStudio';
+import ProjectSafeStep from './pages/ProjectSafeStep';
+import ProjectDocuChat from './pages/ProjectDocuChat';
 import './styles/App.css';
 
 function HomePage() {
@@ -72,13 +72,13 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/experience/gsu" element={<ExperienceGSU />} />
-        <Route path="/experience/vensai" element={<ExperienceVensai />} />
         <Route path="/experience/isro" element={<ExperienceISRO />} />
-        <Route path="/project/mindvault" element={<ProjectMindVault />} />
-        <Route path="/project/botstudio" element={<ProjectBotStudio />} />
-        <Route path="/project/helppro" element={<ProjectHelpPro />} />
+        <Route path="/project/nl2dash" element={<ProjectNL2Dash />} />
         <Route path="/project/aura" element={<ProjectAura />} />
-        <Route path="/project/lumos" element={<ProjectLumos />} />
+        <Route path="/project/sonaragent" element={<ProjectSonarAgent />} />
+        <Route path="/project/botstudio" element={<ProjectBotStudio />} />
+        <Route path="/project/safestep" element={<ProjectSafeStep />} />
+        <Route path="/project/docuchat" element={<ProjectDocuChat />} />
       </Routes>
     </BrowserRouter>
   );

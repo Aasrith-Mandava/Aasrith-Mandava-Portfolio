@@ -22,29 +22,27 @@ export default function ProjectBotStudio() {
           </svg>
         </div>
         <div>
-          <h1>Bot Studio</h1>
-          <p className="detail-role">Multi-Tenant AI Chatbot Platform</p>
-          <p className="detail-period">Personal Project | 2024</p>
+          <h1>BotStudio</h1>
+          <p className="detail-role">Multi-Tenant RAG Platform</p>
+          <p className="detail-period">Personal Project</p>
         </div>
       </div>
 
       <div className="detail-content">
         <section>
           <h2>Overview</h2>
-          <p>Bot Studio is a comprehensive multi-tenant conversational AI platform that enables businesses to create, deploy, and manage intelligent chatbots. With support for 10,000+ documents per bot, it provides enterprise-grade RAG capabilities for accurate, context-aware responses.</p>
+          <p>BotStudio is a multi-tenant chatbot platform with isolated Zilliz vector storage per account and a chunking/embedding pipeline that handles 10K+ chunks at sub-100ms retrieval. Designed for enterprise-grade RAG capabilities with tenant isolation and high-performance vector search.</p>
         </section>
 
         <section>
           <h2>Key Features</h2>
           <ul>
-            <li>Multi-tenant architecture supporting unlimited organizations and bots</li>
-            <li>Document ingestion system handling 10,000+ documents per chatbot</li>
-            <li>Advanced RAG implementation for accurate information retrieval</li>
+            <li>Multi-tenant architecture with isolated Zilliz vector storage per account</li>
+            <li>Chunking and embedding pipeline handling 10K+ chunks at sub-100ms retrieval</li>
+            <li>Enterprise-grade RAG implementation for accurate information retrieval</li>
             <li>Real-time chat interface with streaming responses</li>
-            <li>Admin dashboard for bot management and analytics</li>
-            <li>Custom training on domain-specific documents</li>
-            <li>API endpoints for seamless integration</li>
-            <li>User authentication and role-based access control</li>
+            <li>Tenant-isolated knowledge bases with secure access control</li>
+            <li>Scalable vector search with optimized similarity algorithms</li>
           </ul>
         </section>
 
@@ -52,12 +50,10 @@ export default function ProjectBotStudio() {
           <h2>Technical Implementation</h2>
           <ul>
             <li>Built scalable backend with FastAPI and async processing</li>
-            <li>Implemented Next.js frontend with server-side rendering</li>
-            <li>Integrated Zilliz vector database for efficient similarity search</li>
-            <li>Used Supabase for authentication and PostgreSQL database</li>
-            <li>Designed document processing pipeline with chunking and embedding</li>
-            <li>Implemented caching layer for improved response times</li>
-            <li>Built real-time chat with WebSocket connections</li>
+            <li>Integrated Zilliz vector database for isolated, per-tenant similarity search</li>
+            <li>Designed document processing pipeline with chunking, embedding, and indexing</li>
+            <li>Implemented sub-100ms retrieval through optimized vector indexing strategies</li>
+            <li>Built real-time chat with WebSocket connections and streaming LLM responses</li>
           </ul>
         </section>
 
@@ -65,14 +61,13 @@ export default function ProjectBotStudio() {
           <h2>Technologies Used</h2>
           <div className="tech-tags">
             <span>FastAPI</span>
-            <span>Next.js</span>
             <span>Zilliz</span>
-            <span>Supabase</span>
-            <span>PostgreSQL</span>
             <span>RAG</span>
             <span>LLM</span>
+            <span>Embeddings</span>
             <span>WebSocket</span>
-            <span>Docker</span>
+            <span>Python</span>
+            <span>Vector DB</span>
           </div>
         </section>
       </div>

@@ -23,53 +23,50 @@ export default function ProjectAura() {
                 </div>
                 <div>
                     <h1>AURA</h1>
-                    <p className="detail-role">Multi-Agent Healthcare AI Platform</p>
-                    <p className="detail-period">Personal Project | 2024</p>
+                    <p className="detail-role">Multimodal Agentic Healthcare Ecosystem</p>
+                    <p className="detail-period">Tools: Python, LangGraph, ViTs, FastAPI, React</p>
                 </div>
             </div>
 
             <div className="detail-content">
                 <section>
                     <h2>Overview</h2>
-                    <p>AURA is a comprehensive multi-agent healthcare AI platform built on LangGraph, orchestrating 6 specialist agents for intelligent clinical triage. The system features a React + TypeScript frontend and preserves patient context across multi-turn conversations, enabling seamless handoffs between diagnostic, dietary, insurance, and other specialist agents.</p>
+                    <p>AURA is a multimodal agentic healthcare ecosystem built on LangGraph, orchestrating 5 specialized AI agents for intelligent clinical triage. The system features Agentic RAG with ChromaDB for context-aware, zero-hallucination responses and a self-learning Search Agent that autonomously retrieves, verifies, and ingests new knowledge from authoritative healthcare sources.</p>
                 </section>
 
                 <section>
                     <h2>Key Features</h2>
                     <ul>
-                        <li>LangGraph multi-agent routing system orchestrating handoffs between 6 specialist agents (Diagnostic, Diet, Insurance, and more) while preserving patient context across multi-turn conversations</li>
-                        <li>Real-time Agentic RAG insurance advisor with ChromaDB vector storage and a self-learning Search Agent over CMS.gov and VA.gov</li>
-                        <li>Multi-agent ecosystem utilizing Agentic RAG and ChromaDB for context-aware, zero-hallucination clinical triage</li>
-                        <li>IRIS — a Vision Transformer (ViT) diagnostic engine predicting 10 systemic health risks from retinal scans</li>
-                        <li>Gemini 3 Pro LLM backend optimized for real-time, production-ready inference</li>
-                        <li>React + TypeScript frontend with seamless multi-agent conversation experience</li>
+                        <li>Architected a multi-agent ecosystem using LangGraph to orchestrate 5 specialized AI agents (Diagnostic, Diet, Insurance), utilizing Agentic RAG and ChromaDB for context-aware, zero-hallucination clinical triage.</li>
+                        <li>Developed an Agentic RAG health insurance advisor featuring a self-learning Search Agent that autonomously retrieves, verifies, and ingests new knowledge (CMS.gov, VA.gov), with multi-turn, personalized plan guidance.</li>
+                        <li>Multi-agent orchestration with intelligent routing and context-preserving handoffs between specialist agents</li>
+                        <li>Vision Transformer (ViT) diagnostic capabilities for medical image analysis</li>
+                        <li>React frontend with seamless multi-agent conversation experience</li>
                     </ul>
                 </section>
 
                 <section>
                     <h2>Technical Implementation</h2>
                     <ul>
-                        <li>Architected multi-agent orchestration using LangGraph with intelligent routing and context-preserving handoffs</li>
-                        <li>Built Agentic RAG pipeline with ChromaDB for vector storage and semantic retrieval across healthcare data sources</li>
+                        <li>Built LangGraph state machine for deterministic multi-agent routing with context preservation</li>
+                        <li>Implemented Agentic RAG pipeline with ChromaDB for vector storage and semantic retrieval across healthcare data sources</li>
                         <li>Developed self-learning Search Agent capable of querying CMS.gov and VA.gov for real-time insurance information</li>
-                        <li>Engineered IRIS Vision Transformer diagnostic engine with optimized inference pipeline for retinal scan analysis</li>
-                        <li>Integrated Gemini 3 Pro LLM backend for production-ready, low-latency AI responses</li>
                         <li>Designed zero-hallucination architecture with grounded retrieval and fact-checking across all agent interactions</li>
+                        <li>FastAPI backend with async processing for production-ready inference</li>
                     </ul>
                 </section>
 
                 <section>
                     <h2>Technologies Used</h2>
                     <div className="tech-tags">
-                        <span>LangGraph</span>
-                        <span>React</span>
-                        <span>TypeScript</span>
-                        <span>ChromaDB</span>
-                        <span>Gemini Pro</span>
-                        <span>Vision Transformer</span>
-                        <span>Agentic RAG</span>
                         <span>Python</span>
+                        <span>LangGraph</span>
+                        <span>Vision Transformers</span>
                         <span>FastAPI</span>
+                        <span>React</span>
+                        <span>ChromaDB</span>
+                        <span>Agentic RAG</span>
+                        <span>Gemini Pro</span>
                     </div>
                 </section>
             </div>

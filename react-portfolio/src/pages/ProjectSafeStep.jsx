@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 
-export default function ProjectLumos() {
+export default function ProjectSafeStep() {
     const navigate = useNavigate();
 
     return (
@@ -18,57 +18,57 @@ export default function ProjectLumos() {
             <div className="detail-header">
                 <div className="project-icon" style={{ background: 'linear-gradient(145deg, #3b82f6 0%, #22c55e 100%)', width: '80px', height: '80px', borderRadius: '20px' }}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                     </svg>
                 </div>
                 <div>
-                    <h1>Lumos</h1>
-                    <p className="detail-role">Federal Crime Analytics & ML Platform</p>
-                    <p className="detail-period">Personal Project | 2024</p>
+                    <h1>SafeStep</h1>
+                    <p className="detail-role">Real-time Safety Intelligence</p>
+                    <p className="detail-period">Tools: Scikit-learn, XGBoost, Python, Flask, Azure</p>
                 </div>
             </div>
 
             <div className="detail-content">
                 <section>
                     <h2>Overview</h2>
-                    <p>Lumos is a high-performance federal crime analytics platform that ingests and processes 48 GB of raw crime data across 51 jurisdictions. The system features an async FastAPI backend parallelizing 11 data sources with Gemini AI validation and ML-powered caching, delivering sub-2-second response times under heavy load.</p>
+                    <p>SafeStep is a real-time safety intelligence platform that processes 48 GB of fragmented federal crime data through a Python ETL pipeline, normalizing records from 7,700+ agencies into a compact 43 MB dataset ready for ML inference. The async API layer queries 11 data sources in parallel, bringing response time from 8+ seconds down to under 2 seconds.</p>
                 </section>
 
                 <section>
                     <h2>Key Features</h2>
                     <ul>
-                        <li>Python ETL pipeline ingesting 48 GB of raw federal crime data across 51 jurisdictions, normalizing schemas and compressing 7,717 agency profiles to 43 MB for low-latency ML inference</li>
-                        <li>Async FastAPI backend parallelizing 11 data sources via asyncio.gather() with Gemini AI validation</li>
-                        <li>ML LRU caching system with 10K entries sustaining sub-2-second responses under load</li>
-                        <li>Schema normalization across diverse jurisdiction data formats</li>
-                        <li>Real-time crime trend analysis and prediction capabilities</li>
-                        <li>Production-ready API with comprehensive error handling and monitoring</li>
+                        <li>Python ETL pipeline processing 48 GB of fragmented federal crime data</li>
+                        <li>Record normalization from 7,700+ agencies into a compact 43 MB ML-ready dataset</li>
+                        <li>FastAPI async API layer with asyncio.gather() for parallel data source queries</li>
+                        <li>11 data sources queried in parallel — response time from 8+ seconds to under 2 seconds</li>
+                        <li>ML-powered risk scoring and crime trend analysis</li>
+                        <li>Real-time safety intelligence for location-based queries</li>
                     </ul>
                 </section>
 
                 <section>
                     <h2>Technical Implementation</h2>
                     <ul>
-                        <li>Designed and built ETL pipeline for processing 48 GB of heterogeneous federal crime data with schema normalization</li>
-                        <li>Implemented async data parallelization using asyncio.gather() across 11 concurrent data sources</li>
-                        <li>Integrated Gemini AI for intelligent data validation and anomaly detection in crime datasets</li>
-                        <li>Built ML-powered LRU caching layer with 10K entry capacity for low-latency inference</li>
-                        <li>Compressed 7,717 agency profiles from raw data to 43 MB optimized format</li>
-                        <li>Engineered FastAPI endpoints with async request handling for sustained high-throughput performance</li>
+                        <li>Designed and built Python ETL pipeline for ingesting and normalizing 48 GB of heterogeneous federal crime data</li>
+                        <li>Compressed 7,700+ agency profiles from raw data to optimized 43 MB format for low-latency inference</li>
+                        <li>Built async FastAPI backend with asyncio.gather() parallelizing 11 concurrent data source queries</li>
+                        <li>Trained Scikit-learn and XGBoost models for crime pattern detection and risk scoring</li>
+                        <li>Deployed on Azure with Flask for production-ready serving</li>
                     </ul>
                 </section>
 
                 <section>
                     <h2>Technologies Used</h2>
                     <div className="tech-tags">
+                        <span>Scikit-learn</span>
+                        <span>XGBoost</span>
                         <span>Python</span>
+                        <span>Flask</span>
+                        <span>Azure</span>
                         <span>FastAPI</span>
                         <span>asyncio</span>
-                        <span>Gemini AI</span>
-                        <span>Machine Learning</span>
-                        <span>Pandas</span>
                         <span>ETL Pipeline</span>
-                        <span>LRU Cache</span>
+                        <span>Pandas</span>
                     </div>
                 </section>
             </div>

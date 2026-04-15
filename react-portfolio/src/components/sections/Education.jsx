@@ -4,16 +4,14 @@ const education = [
     degree: 'Master of Science in Computer Science',
     gpa: '3.6/4.0',
     location: 'Atlanta, GA',
-    date: 'Aug 2024 – May 2026',
+    date: 'Aug 2024 – Dec 2026',
     coursework: [
-      'Advanced Image Processing',
-      'Advanced Video Processing',
-      'Advanced Database Systems',
-      'Human Computer Interaction',
-      'Web Programming',
-      'Text Processing & LLMs',
-      'Software Development',
-      'Software Engineering'
+      'Computer Vision',
+      'Machine Learning',
+      'Data Mining',
+      'Large Language Models',
+      'Natural Language Processing',
+      'Deep Learning'
     ]
   },
   {

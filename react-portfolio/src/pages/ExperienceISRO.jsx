@@ -11,59 +11,47 @@ export default function ExperienceISRO() {
         <div className="detail-logo logo-isro">ISRO</div>
         <div>
           <h1>Indian Space Research Organization</h1>
-          <p className="detail-role">Software Engineer</p>
-          <p className="detail-period">May 2022 – Aug 2024 | India</p>
+          <p className="detail-role">ML Intern</p>
+          <p className="detail-period">Jan 2024 – Apr 2024 | AP, India</p>
         </div>
       </div>
 
       <div className="detail-content">
         <section>
           <h2>Overview</h2>
-          <p>Worked as a Software Engineer at the Indian Space Research Organization (ISRO), India's premier space agency. Developed mission-critical enterprise systems for satellite operations, ground control, and space mission management. Contributed to projects supporting India's space exploration initiatives.</p>
+          <p>Worked as an ML Intern at the Indian Space Research Organization (ISRO), applying machine learning techniques to payroll analytics, anomaly detection, and intelligent ticket routing. Built time series forecasting models, trained ensemble classifiers for fraud detection, and developed NLP-based ticket classification systems.</p>
         </section>
 
         <section>
           <h2>Key Projects & Achievements</h2>
           <ul>
-            <li>Developed real-time satellite telemetry processing system handling 10,000+ data points per second</li>
-            <li>Built mission-critical backend services using Spring Boot for satellite ground control operations</li>
-            <li>Implemented secure authentication and authorization systems using Azure AD for mission control access</li>
-            <li>Designed and deployed microservices architecture for distributed satellite data processing</li>
-            <li>Created RESTful APIs for satellite command and control systems</li>
-            <li>Developed data visualization dashboards for real-time mission monitoring</li>
-            <li>Implemented message queuing systems using Apache Kafka for reliable data streaming</li>
-            <li>Optimized database queries reducing response time by 60% for critical operations</li>
-            <li>Deployed applications on AWS EC2 with RDS and ElastiCache for high availability</li>
-            <li>Collaborated with scientists and engineers across multiple space missions</li>
+            <li>Built a time series model on 3 years of payroll and budget data to forecast monthly departmental spend, improved planning accuracy by 8%.</li>
+            <li>Trained Random Forest and XGBoost models to flag anomalous payroll transactions across 2,000 employee records, caught patterns that saved around 30% in disbursement errors.</li>
+            <li>Trained a BERT-based classifier on historical payroll tickets to auto-route employee queries across HR, benefits, and finance teams, handled around 300 tickets/week with 87% routing accuracy.</li>
           </ul>
         </section>
 
         <section>
           <h2>Technical Impact</h2>
           <ul>
-            <li>Ensured 99.9% uptime for mission-critical satellite control systems</li>
-            <li>Reduced system latency by implementing efficient caching strategies</li>
-            <li>Enhanced system security through comprehensive authentication mechanisms</li>
-            <li>Improved code maintainability through clean architecture and documentation</li>
+            <li>Improved departmental budget planning accuracy through ML-driven forecasting</li>
+            <li>Automated anomaly detection in payroll data, reducing manual audit overhead</li>
+            <li>Streamlined employee query routing with NLP-based classification</li>
+            <li>Applied BERT-based transfer learning for domain-specific ticket classification</li>
           </ul>
         </section>
 
         <section>
           <h2>Technologies Used</h2>
           <div className="tech-tags">
-            <span>Java</span>
-            <span>Spring Boot</span>
-            <span>PostgreSQL</span>
-            <span>MySQL</span>
-            <span>AWS EC2</span>
-            <span>RDS</span>
-            <span>ElastiCache</span>
-            <span>Docker</span>
-            <span>Kafka</span>
-            <span>Elasticsearch</span>
-            <span>Azure AD</span>
-            <span>Git</span>
-            <span>Microservices</span>
+            <span>Python</span>
+            <span>Random Forest</span>
+            <span>XGBoost</span>
+            <span>BERT</span>
+            <span>Time Series</span>
+            <span>Scikit-learn</span>
+            <span>NLP</span>
+            <span>Anomaly Detection</span>
           </div>
         </section>
       </div>

@@ -1,28 +1,16 @@
+const experiences = [
+  {
     id: 'gsu',
     company: 'Georgia State University',
     logo: 'GSU',
     logoClass: 'logo-gsu',
-    description: 'Building next-gen research applications',
-    role: 'Graduate Research Assistant',
+    description: 'AI/ML research in medical imaging and healthcare systems',
+    role: 'Graduate Research Assistant – AIML Engineer',
     period: 'Aug 2024 – Present',
     details: [
-      'Redesigned PostgreSQL execution plans using indexing strategies, improving query performance by 3x.',
-      'Built real-time synchronization pipelines using WebSockets with Azure AD and OAuth protocols.',
-      'Modularized legacy frontend code into reusable React components, reducing production defects by 35%.'
-    ]
-  },
-  {
-    id: 'vensai',
-    company: 'Vensai Technologies (Client- Ceva Logistics)',
-    logo: 'VT',
-    logoClass: 'logo-vensai',
-    description: 'AI-powered enterprise solutions and automation',
-    role: 'Software Developer Intern (Co-op)',
-    period: '2024',
-    details: [
-      'Designed and developed an end-to-end AI-powered HR onboarding chatbot using Agentic RAG with multi-agent orchestration via Autogen framework.',
-      'Spearheaded an SDLC Automation Agent utilizing Transformer-based architectures (RoBERTa/BERT) to autonomously detect and classify critical system issues from 500+ weekly logs.',
-      'Built an LLM microservice using Amazon Bedrock and AWS Lambda integrated via API Gateway to automate 2 different Internal APIs workflows, reducing content analysis time by 75%.'
+      'Trained a Vision-Language Transformer on 7K+ radiology image-report pairs, using cross-attention between a ViT encoder and GPT-2 decoder to generate free-text reports from chest X-rays.',
+      'Fine-tuned multi-modal LLMs with PyTorch and LoRA for radiology report generation, scored 13.4% above VisionGPT on BLEU-4 at 1.6s/image inference.',
+      'Built an MCP server that connects healthcare databases to LLM agents for real-time tool-calling, cut manual query latency by 60%.'
     ]
   },
   {
@@ -30,13 +18,13 @@
     company: 'Indian Space Research Organization',
     logo: 'ISRO',
     logoClass: 'logo-isro',
-    description: 'Enterprise-grade systems for space missions',
-    role: 'Software Engineer',
-    period: 'May 2022 – Aug 2024',
+    description: 'ML-driven payroll analytics and intelligent automation',
+    role: 'ML Intern',
+    period: 'Jan 2024 – Apr 2024',
     details: [
-      'Engineered enterprise RESTful services using Spring Boot, managing sensitive donor data.',
-      'Implemented token-based authentication and optimized SQL queries, improving response time by 30%.',
-      'Maintained strict compliance with government security standards for high-availability systems.'
+      'Built a time series model on 3 years of payroll and budget data to forecast monthly departmental spend, improved planning accuracy by 8%.',
+      'Trained Random Forest and XGBoost models to flag anomalous payroll transactions across 2,000 employee records, caught patterns that saved around 30% in disbursement errors.',
+      'Trained a BERT-based classifier on historical payroll tickets to auto-route employee queries across HR, benefits, and finance teams, handled around 300 tickets/week with 87% routing accuracy.'
     ]
   }
 ];

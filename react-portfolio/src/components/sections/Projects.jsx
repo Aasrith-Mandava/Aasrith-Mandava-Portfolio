@@ -1,50 +1,23 @@
 const projects = [
   {
-    name: 'MindVault',
-    tagline: 'Semantic search over your browsing history using RAG and LLM embeddings',
-    description: 'A privacy-focused browser extension that ingests browsing history into a local vector database. Uses local LLMs to enable natural language Q&A about past online activities without data leaving the device.',
-    tech: ['Python', 'LLM', 'Vector DB', 'Chrome Extension'],
-    gradient: 'linear-gradient(135deg, #171717 0%, #404040 100%)',
+    name: 'NL2Dash',
+    tagline: 'Natural language to unified dashboards — BI turnaround from days to under 10 seconds',
+    description: 'Built a multi-agent Text-to-SQL pipeline (LangChain/LangGraph) with vector-based schema linking, predictive modeling, and AST-based SQL ranking across 4 dialects and 50+ table schemas. Includes a D3.js code generation engine producing 3 persona-specific React dashboards (CEO/CFO/CTO) from a single natural language prompt with autonomous error recovery.',
+    tech: ['LangChain', 'LangGraph', 'D3.js', 'React', 'Text-to-SQL'],
+    gradient: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-        <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-        <line x1="12" y1="22.08" x2="12" y2="12"></line>
-      </svg>
-    )
-  },
-  {
-    name: 'Bot Studio',
-    tagline: 'Multi-tenant conversational AI platform with 10K+ document support',
-    description: 'Enterprise-grade chatbot platform supporting multiple tenants. Features a drag-and-drop workflow builder, RAG pipeline with Zilliz Cloud, and seamless integration with knowledge bases.',
-    tech: ['FastAPI', 'Next.js', 'Zilliz', 'Supabase'],
-    gradient: 'linear-gradient(135deg, #404040 0%, #737373 100%)',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-      </svg>
-    )
-  },
-  {
-    name: 'HelpPro',
-    tagline: 'Real-time collaboration platform with GitHub bounties integration',
-    description: 'A real-time developer assistance platform connecting users with experts. Features live code collaboration, instant bounty payouts via Stripe, and GitHub issue sync.',
-    tech: ['Fastify', 'Drizzle ORM', 'Socket.IO', 'React'],
-    gradient: 'linear-gradient(135deg, #737373 0%, #a3a3a3 100%)',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-        <circle cx="9" cy="7" r="4"></circle>
-        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+        <line x1="3" y1="9" x2="21" y2="9"></line>
+        <line x1="9" y1="21" x2="9" y2="9"></line>
       </svg>
     )
   },
   {
     name: 'AURA',
-    tagline: 'Multi-agent healthcare AI with LangGraph orchestration & Vision Transformer diagnostics',
-    description: 'Architected a LangGraph multi-agent ecosystem orchestrating 6 specialist agents for clinical triage, featuring Agentic RAG with ChromaDB and IRIS — a Vision Transformer engine predicting 10 systemic health risks from retinal scans.',
-    tech: ['LangGraph', 'React', 'TypeScript', 'ChromaDB', 'Gemini Pro', 'ViT'],
+    tagline: 'Multimodal agentic healthcare ecosystem with LangGraph orchestration & Agentic RAG',
+    description: 'Architected a multi-agent ecosystem using LangGraph to orchestrate 5 specialized AI agents (Diagnostic, Diet, Insurance), utilizing Agentic RAG and ChromaDB for context-aware, zero-hallucination clinical triage. Features a self-learning Search Agent that autonomously retrieves, verifies, and ingests new knowledge from CMS.gov and VA.gov.',
+    tech: ['Python', 'LangGraph', 'ViTs', 'FastAPI', 'React', 'ChromaDB'],
     gradient: 'linear-gradient(135deg, #4dd9c0 0%, #8b5cf6 100%)',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -53,14 +26,55 @@ const projects = [
     )
   },
   {
-    name: 'Lumos',
-    tagline: 'Federal crime analytics platform with 48 GB ETL pipeline & ML-powered inference',
-    description: 'Built a Python ETL pipeline ingesting 48 GB of raw federal crime data across 51 jurisdictions, with an async FastAPI backend parallelizing 11 data sources and Gemini AI validation — sustaining sub-2-second responses under load.',
-    tech: ['Python', 'FastAPI', 'asyncio', 'Gemini AI', 'ML'],
+    name: 'SonarAgent',
+    tagline: 'AI-powered code remediation pipeline with autonomous GitHub PR generation',
+    description: 'Built a 4-agent pipeline on FastAPI that scans repos through SonarQube, generates code fixes, scores them for regressions, and opens GitHub PRs autonomously — cutting fix time by 85%. Connected LangChain to 4 LLM providers with per-agent model switching and LangSmith observability, cutting investigation time by 70%.',
+    tech: ['SonarQube', 'MCP', 'RAG', 'LangSmith', 'FastAPI', 'LangChain'],
+    gradient: 'linear-gradient(135deg, #f97316 0%, #ef4444 100%)',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="16 18 22 12 16 6"></polyline>
+        <polyline points="8 6 2 12 8 18"></polyline>
+      </svg>
+    )
+  },
+  {
+    name: 'BotStudio',
+    tagline: 'Multi-tenant RAG platform with isolated vector storage and sub-100ms retrieval',
+    description: 'Built a multi-tenant chatbot platform with isolated Zilliz vector storage per account and a chunking/embedding pipeline that handles 10K+ chunks at sub-100ms retrieval.',
+    tech: ['FastAPI', 'Zilliz', 'RAG', 'LLM', 'Embeddings'],
+    gradient: 'linear-gradient(135deg, #11998e 0%, #38ef7d 100%)',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+      </svg>
+    )
+  },
+  {
+    name: 'SafeStep',
+    tagline: 'Real-time safety intelligence with 48 GB ETL pipeline & parallel API layer',
+    description: 'Processed 48 GB of fragmented federal crime data through a Python ETL pipeline, normalizing records from 7,700+ agencies into a compact 43 MB dataset. Built the API layer with FastAPI using asyncio.gather() to query 11 data sources in parallel — response time went from 8+ seconds to under 2 seconds.',
+    tech: ['Scikit-learn', 'XGBoost', 'Python', 'Flask', 'Azure'],
     gradient: 'linear-gradient(135deg, #3b82f6 0%, #22c55e 100%)',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+      </svg>
+    )
+  },
+  {
+    name: 'DocuChat',
+    tagline: 'RAG Document Q&A system with sub-3 second grounded responses',
+    description: 'Built a RAG Q&A system with LangChain, FAISS, and Google Gemini that answers questions grounded in uploaded PDFs, deployed on HuggingFace Spaces with sub-3 second responses.',
+    tech: ['Python', 'LangChain', 'FAISS', 'HuggingFace', 'Google Gemini'],
+    gradient: 'linear-gradient(135deg, #a855f7 0%, #ec4899 100%)',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+        <polyline points="14 2 14 8 20 8"></polyline>
+        <line x1="16" y1="13" x2="8" y2="13"></line>
+        <line x1="16" y1="17" x2="8" y2="17"></line>
+        <polyline points="10 9 9 9 8 9"></polyline>
       </svg>
     )
   }
