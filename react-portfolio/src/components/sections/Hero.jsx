@@ -4,9 +4,8 @@ export default function Hero() {
   const [time, setTime] = useState('');
   const [displayText, setDisplayText] = useState('');
   const [spotlightPos, setSpotlightPos] = useState({ x: 50, y: 50 });
-  const gradient1Ref = useRef(null);
-  const gradient2Ref = useRef(null);
   const heroRef = useRef(null);
+  const canvasRef = useRef(null);
   const fullText = "Hi, I'm Aasrith Mandava";
 
   useEffect(() => {
@@ -18,8 +17,7 @@ export default function Hero() {
       } else {
         clearInterval(typingInterval);
       }
-    }, 100);
-
+    }, 80);
     return () => clearInterval(typingInterval);
   }, []);
 
@@ -34,20 +32,10 @@ export default function Hero() {
       };
       setTime(new Date().toLocaleTimeString('en-US', options));
     };
-
     updateTime();
     const interval = setInterval(updateTime, 1000);
 
-    let mouseX = globalThis.innerWidth / 2;
-    let mouseY = globalThis.innerHeight / 2;
-    let currentX = globalThis.innerWidth / 2;
-    let currentY = globalThis.innerHeight / 2;
-    let animationId;
-
     const handleMouseMove = (e) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-
       if (heroRef.current) {
         const rect = heroRef.current.getBoundingClientRect();
         const x = ((e.clientX - rect.left) / rect.width) * 100;
@@ -56,68 +44,112 @@ export default function Hero() {
       }
     };
 
-    const animateGradients = () => {
-      currentX += (mouseX - currentX) * 0.1;
-      currentY += (mouseY - currentY) * 0.1;
-
-      const offsetX1 = (currentX - globalThis.innerWidth / 2) * 0.3;
-      const offsetY1 = (currentY - globalThis.innerHeight / 2) * 0.3;
-      const offsetX2 = (currentX - globalThis.innerWidth / 2) * 0.2;
-      const offsetY2 = (currentY - globalThis.innerHeight / 2) * 0.2;
-
-      if (gradient1Ref.current) {
-        gradient1Ref.current.style.transform = `translate(${offsetX1}px, ${offsetY1}px)`;
-      }
-      if (gradient2Ref.current) {
-        gradient2Ref.current.style.transform = `translate(${offsetX2}px, ${offsetY2}px)`;
-      }
-
-      animationId = globalThis.requestAnimationFrame(animateGradients);
-    };
-
     globalThis.addEventListener('mousemove', handleMouseMove);
-    animateGradients();
-
     return () => {
       clearInterval(interval);
       globalThis.removeEventListener('mousemove', handleMouseMove);
-      if (animationId) globalThis.cancelAnimationFrame(animationId);
+    };
+  }, []);
+
+  // Particle grid animation
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let animId;
+    let particles = [];
+    const resize = () => {
+      canvas.width = canvas.offsetWidth * 2;
+      canvas.height = canvas.offsetHeight * 2;
+      ctx.scale(2, 2);
+      initParticles();
+    };
+    const initParticles = () => {
+      particles = [];
+      const cols = Math.floor(canvas.offsetWidth / 80);
+      const rows = Math.floor(canvas.offsetHeight / 80);
+      for (let i = 0; i < cols; i++) {
+        for (let j = 0; j < rows; j++) {
+          particles.push({
+            x: i * 80 + 40,
+            y: j * 80 + 40,
+            baseX: i * 80 + 40,
+            baseY: j * 80 + 40,
+            size: 1.5,
+            alpha: Math.random() * 0.3 + 0.05
+          });
+        }
+      }
+    };
+    const draw = () => {
+      ctx.clearRect(0, 0, canvas.offsetWidth, canvas.offsetHeight);
+      particles.forEach((p, i) => {
+        p.x = p.baseX + Math.sin(Date.now() * 0.001 + i * 0.5) * 3;
+        p.y = p.baseY + Math.cos(Date.now() * 0.0008 + i * 0.3) * 3;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(232,83,30,${p.alpha})`;
+        ctx.fill();
+      });
+      // Draw connections
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 100) {
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.strokeStyle = `rgba(232,83,30,${0.04 * (1 - dist / 100)})`;
+            ctx.lineWidth = 0.5;
+            ctx.stroke();
+          }
+        }
+      }
+      animId = requestAnimationFrame(draw);
+    };
+    resize();
+    draw();
+    globalThis.addEventListener('resize', resize);
+    return () => {
+      cancelAnimationFrame(animId);
+      globalThis.removeEventListener('resize', resize);
     };
   }, []);
 
   return (
     <section className="hero" ref={heroRef}>
-      <div className="hero-gradient" ref={gradient1Ref}></div>
-      <div className="hero-gradient-2" ref={gradient2Ref}></div>
+      <canvas ref={canvasRef} className="hero-canvas" />
       <div
         className="spotlight"
         style={{
-          background: `radial-gradient(circle 800px at ${spotlightPos.x}% ${spotlightPos.y}%, rgba(255, 255, 255, 0.1), rgba(200, 200, 200, 0.05) 40%, transparent 70%)`
+          background: `radial-gradient(circle 600px at ${spotlightPos.x}% ${spotlightPos.y}%, rgba(232,83,30,0.06), transparent 70%)`
         }}
-      ></div>
+      />
       <div className="hero-content">
-
-        <div className="hero-location">
-          <span>📍 Atlanta, GA</span>
-          <span className="divider"></span>
-          <span id="live-time">{time}</span>
+        <div className="hero-badge-row">
+          <div className="hero-location">
+            <span className="status-dot" />
+            <span>Atlanta, GA</span>
+            <span className="divider" />
+            <span id="live-time">{time}</span>
+          </div>
         </div>
         <h1 className="hero-title">{displayText}<span className="cursor-blink">|</span></h1>
+        <p className="hero-subtitle">AI/ML Engineer · Full Stack Developer · Graduate Researcher</p>
         <div className="hero-info">
           <p>
             <span className="value">Growing up amidst rockets and automation ignited my passion for engineering. Today, I channel that inspiration into building software that scales, automates, adapts and creates autonomous systems to launch ideas into reality.</span>
           </p>
         </div>
+        <div className="hero-cta">
+          <a href="#projects" className="cta-primary">View Projects</a>
+          <a href="#connect" className="cta-secondary">Get in Touch</a>
+        </div>
       </div>
       <div className="scroll-indicator">
-        <div className="mouse">
-          <div className="wheel"></div>
-        </div>
-        <div className="arrow-scroll">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        <div className="mouse"><div className="wheel" /></div>
       </div>
     </section>
   );

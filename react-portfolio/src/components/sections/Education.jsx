@@ -5,14 +5,7 @@ const education = [
     gpa: '3.6/4.0',
     location: 'Atlanta, GA',
     date: 'Aug 2024 – Dec 2026',
-    coursework: [
-      'Computer Vision',
-      'Machine Learning',
-      'Data Mining',
-      'Large Language Models',
-      'Natural Language Processing',
-      'Deep Learning'
-    ]
+    coursework: ['Computer Vision', 'Machine Learning', 'Data Mining', 'Large Language Models', 'Natural Language Processing', 'Deep Learning']
   },
   {
     school: 'Anna University',
@@ -20,14 +13,7 @@ const education = [
     gpa: '3.8/4.0',
     location: 'Tamil Nadu, India',
     date: 'Aug 2020 – Mar 2024',
-    coursework: [
-      'Data Structures',
-      'Design & Analysis of Algorithms',
-      'Cloud Computing',
-      'Intro to Data Science',
-      'Intro to Python',
-      'Object Oriented Programming'
-    ]
+    coursework: ['Data Structures', 'Design & Analysis of Algorithms', 'Cloud Computing', 'Intro to Data Science', 'Intro to Python', 'Object Oriented Programming']
   }
 ];
 
@@ -48,7 +34,6 @@ export default function Education() {
                 <span className="date">{edu.date}</span>
               </div>
             </div>
-
             <div className="coursework-section">
               <h4>Coursework</h4>
               <div className="course-tags">
@@ -57,7 +42,6 @@ export default function Education() {
                 ))}
               </div>
             </div>
-
             <div className="education-footer">
               <span className="location">{edu.location}</span>
             </div>

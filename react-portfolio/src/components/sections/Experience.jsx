@@ -34,26 +34,30 @@ export default function Experience() {
     <section id="experience" className="fade-in">
       <div className="section-header">
         <h2 className="section-title">Experience</h2>
+        <span className="section-meta"><span>2</span> roles</span>
       </div>
       <div className="experience-tree stagger-children">
         {experiences.map((exp) => (
           <div className="tree-node" key={exp.id}>
             <div className="experience-card">
-              <div className="experience-info">
-                <h3>{exp.company}</h3>
-                <p className="description">{exp.description}</p>
-                <div>
-                  <span className="role">{exp.role}</span>
-                  <span className="period">{exp.period}</span>
+              <div className="exp-card-header">
+                <div className={`experience-logo ${exp.logoClass}`}>{exp.logo}</div>
+                <div className="experience-info">
+                  <h3>{exp.company}</h3>
+                  <p className="description">{exp.description}</p>
+                  <div className="exp-meta">
+                    <span className="role">{exp.role}</span>
+                    <span className="period">{exp.period}</span>
+                  </div>
                 </div>
-                {exp.details && (
-                  <ul className="experience-details">
-                    {exp.details.map((detail, index) => (
-                      <li key={`detail-${index}`}>{detail}</li>
-                    ))}
-                  </ul>
-                )}
               </div>
+              {exp.details && (
+                <ul className="experience-details">
+                  {exp.details.map((detail, index) => (
+                    <li key={`detail-${index}`}>{detail}</li>
+                  ))}
+                </ul>
+              )}
             </div>
           </div>
         ))}
